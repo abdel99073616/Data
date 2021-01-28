@@ -5,6 +5,9 @@ from numpy.core.records import array
 from numpy.lib.shape_base import column_stack
 import pandas as pd
 import matplotlib
+import matplotlib.pyplot as plt
+
+
 
 DataALL = pd.read_csv("datalast.csv")
 
@@ -76,5 +79,15 @@ for i in range(len(s2)):
 DataALL.insert(20 , 'Department120' ,Department)
 
 
-DataALL.to_csv(r'D:\Graduation\Graduation-Project/data_dep120.csv', index = False)
+DataALL.to_csv(r'Datadata.csv', index = False)
 
+
+data  =  pd.read_csv("Datadata.csv")
+X  = data.drop(["Departments","Department120"] , axis = 1)
+y= data['Department120']
+
+
+
+plt.scatter(y,X['DataBase'])
+
+plt.show()
