@@ -14,7 +14,8 @@ DataALL = pd.read_csv("datalast.csv")
 s =  DataALL
 afs = s.iloc[: , 1:]
 header = s.head()
-z = 5
+z = 10
+
 #for i in range(z):
 CS_Mat = np.array([
     s['Calculus'][:] > 99,
