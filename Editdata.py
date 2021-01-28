@@ -87,8 +87,9 @@ data  =  pd.read_csv("Datadata.csv")
 X  = data.drop(["Departments","Department120"] , axis = 1)
 y= data['Department120']
 
+data2 = data["Departments"]
 
 
-plt.scatter(y,X['DataBase'])
+plt.scatter(data2,X['DataBase'])
 
 plt.show()
